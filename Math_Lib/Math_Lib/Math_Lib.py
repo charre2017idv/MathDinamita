@@ -1,4 +1,6 @@
 import math
+print ""
+
 print "Bienvenido a tu Libreria Matematica"
 print "-"*50
 
@@ -19,9 +21,15 @@ print ""
 
 print "Las funciones que puede traducir son las siguientes (Son conmutativas):"
 print ""
-print "- Binario a Hexadecimal"
-print "- Decimal a Hexadecimal"
-print "- Decimal a Binario"
+print "- (7) Binario a Hexadecimal"
+print "- (8) Decimal a Hexadecimal"
+print "- (9) Decimal a Binario"
+
+print ""
+
+print "Las funciones que puede realizar en su persona son las siguientes: "
+print ""
+print "- (10) Indice de Masa Corporal (IMC)"
 print "-"*50
 
 n=int (raw_input("Que es lo que quieres realizar: "))
