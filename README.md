@@ -4,15 +4,16 @@ Este es un repositorio de la PPA de IDV.
 
 
 Estos son los pasos que se deben de seguir para subir un documento al repositorio:
+1.Agregar nombre de quien edito el documento.
 
-1. Agregar el numero de version.
+2. Agregar el numero de version.
 
   Ejemplo : Versión: 1.1 
 
-2. Decir que se modificara de la version:
+3. Decir que se modificara de la version:
 
 Ejemplo:
-
+      Modificado por: "Juanito"
       Version: 1.0
       
       En esta versión se modifica lo siguiente:
