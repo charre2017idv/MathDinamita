@@ -7,6 +7,10 @@ Estos son los pasos que se deben de seguir para subir un documento al repositori
 
 1. Agregar nombre de quien edito el documento.
 
+Ejemplo:
+    
+    Modificado por: "Juanito"
+
 2. Agregar el numero de version.
 
  Ejemplo: 
@@ -17,11 +21,8 @@ Estos son los pasos que se deben de seguir para subir un documento al repositori
 
 Ejemplo:
 
-      Modificado por: "Juanito"
-      
-      Version: 1.0
-      
       En esta versión se modifica lo siguiente:
+      
         1. Se agregan parámetros del menú de funciones
         2. Se agregan cambios de syntaxis
        
