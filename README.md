@@ -1,7 +1,23 @@
 # MathDinamita
 Este es un repositorio de la PPA de IDV.
 
+MathDinamita
 
+   Desarrollado por:
+        
+        · Roberto Charreton 
+        · Fernando Jimenez 
+        · Olaf Cortes
+        · Miguel Garcia 
+        
+El equipo Dinamita esta desarrollando actualmente:
+    
+    En una libreria matematica
+          # Math_lib.py
+
+Se trabajara en  la versiòn de:
+
+    Python 2.7.13
 
 Estos son los pasos que se deben de seguir para subir un documento al repositorio:
 
@@ -38,10 +54,11 @@ Hasta el final, agregar las fuentes donde estuvieron investigando de este modo e
  
       Modificado por: "Juanito"
       
-      Version: 1.0
+      Versiòn: 1.0
       
       En esta versión se modifica lo siguiente:
         1. Se agregan parámetros del menú de funciones
         2. Se agregan cambios de syntaxis
         
       Fuente: http://www.openbookproject.net/thinkcs/archive/python/thinkcspyesp3e_abandonado/cap02.html
+
