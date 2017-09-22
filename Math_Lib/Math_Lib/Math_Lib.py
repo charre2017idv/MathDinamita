@@ -61,6 +61,7 @@ if (n==1) : #Suma
         b=int(raw_input("Numero: "))
         r=r+b
         i=i+1
+#Hola
     print "El resultado de la suma es: " +str(suma(r))
 elif (n==2): #Multiplicacion
     print "Multiplicacion"
