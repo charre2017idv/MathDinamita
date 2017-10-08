@@ -142,6 +142,16 @@ elif (n==9): #Decimal a Binario
         numero=numero/2
     a.reverse()
     print "Su resultado es: " +  str(DaB(a))
+elif (n==13):
+    a=0 #opcion numero 13 (Definir si es un numero primo)
+    n=int(input("Ingrese numero y le diremos si es primo o no "))
+    for i in range(1,n+1):
+        if(n % i==0):
+            a=a+1
+    if(a!=2):
+        print( str(n)+" No es primo")
+    else:
+        print( str(n)+" si es primo")
 
 
 else:
