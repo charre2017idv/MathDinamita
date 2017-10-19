@@ -226,7 +226,6 @@ elif (n==8): #Numero Primo por Rango
                     prnt=True
     print ""
 
-
 elif (n==9): #Binario a Hexadecimal -- Falta completar
     print "BINARIO -> HEXADECIMAL" 
     print "" 
@@ -235,14 +234,20 @@ elif (n==10): #Binario a Decimal -- Falta completar
     print "DECIMAL -> HEXADECIMAL"
     print ""
 
-elif (n==11): #Decimal a Hexadecimal -- Falta completar
+elif (n==11): #Decimal a Hexadecimal
     print "DECIMAL -> HEXADECIMAL"
     print ""
-    print ("Decimal a Hexadecimal")
-    print ("")
-    print ("Que numero decimal quiere convertir: ")
-    a=int(raw_input())
-    print ("Su resultado es: " + format(a, '02x'))
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Decimal -> Hexadecimal---"
+        print "(1) Ingresar una cifra para converir el numero a hexadecimal"
+        print "(2) Una vez ingresado el numero, se trasladara a decimal pero contando A, B, C, D, E y F como numeros también."
+        print "(3) Como resultado, el programa le dira el numero que ingreso, pero usando los dieciseis numeros"
+        print ""
+    a=int(raw_input("Ingrese una cifra en decimal: "))
+    print "Su resultado es: " + format(a, '02x')
+    print ""
 
 elif (n==12): #Decimal a Binario
     print "---DECIMAL -> BINARIO---"
@@ -252,10 +257,10 @@ elif (n==12): #Decimal a Binario
     if (hlp=="h" or hlp=="H"):
         print "---Ayuda de Decimal -> Binario---"
         print "(1) Ingresar una cifra para converir el numero en binario"
-        print "(2) Una vez ingresado el numero, lo trasladara a binario"
+        print "(2) Una vez ingresado el numero, se trasladara a 1s y 0s"
         print "(3) Como resultado, el programa le dira el numero que ingreso, pero en binario"
         print ""
-    numero=int(raw_input("Ingrese un numero: "))
+    numero=int(raw_input("Ingrese una cifra en decimal: "))
     a=[]
     while(numero>0):
         if(numero%2==0):
@@ -265,6 +270,7 @@ elif (n==12): #Decimal a Binario
         numero=numero/2
     a.reverse()
     print "Su resultado es: " +  str(DaB(a))
+    print ""
 
 elif (n==13): #Hexadecimal a Binario
     print "HEXADECIMAL -> BINARIO"
