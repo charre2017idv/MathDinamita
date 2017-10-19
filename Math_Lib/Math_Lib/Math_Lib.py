@@ -238,6 +238,11 @@ elif (n==10): #Binario a Decimal -- Falta completar
 elif (n==11): #Decimal a Hexadecimal -- Falta completar
     print "DECIMAL -> HEXADECIMAL"
     print ""
+    print ("Decimal a Hexadecimal")
+        print ("")
+        print ("Que numero decimal quiere convertir: ")
+        a=int(input())
+        print ("Su resultado es: " + format(a, '02x'))
 
 elif (n==12): #Decimal a Binario
     print "---DECIMAL -> BINARIO---"
