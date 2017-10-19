@@ -1,4 +1,5 @@
 import math
+import os
 n=0
 print "MATHLIB (TM)2017"
 print "-"*50
@@ -10,10 +11,10 @@ print "-(1) Suma "
 print "-(2) Multiplicacion "
 print "-(3) Division"
 print "-(4) Modulo"
-print "-(5) Exponente"
+print "-(5) Potencia"
 print "-(6) Raiz"
-print "-(7) Comprobacion de numeros primos"
-print "-(8) Numeros primos por rango"
+print "-(7) Verificacion de numeros primos"
+print "-(8) Rango de numeros primos"
 
 print ""
 
@@ -30,17 +31,17 @@ print ""
 
 print "FUNCIONES ADICIONALES: "
 print ""
-print "-(15) Indice de Masa Corporal (IMC)"
+print "-(15) Indice de Masa Corporal [IMC]"
 print ""
-print "En caso de necesitar ayuda, presiona 'h'"
 print "-"*50
 
 while (n<1 or n>15):
-    n=int (raw_input("Escriba el numero de la funcion a realizar: "))
+    n=int(raw_input("Escriba el numero de la funcion a realizar: "))
     if (n<1 or n>15):
         print "Ese numero es invalido. Por favor, ingrese una opcion permitida"
         print ""
 print "-"*50
+os.system("cls")
 
 def suma (a):
     return a
@@ -50,7 +51,7 @@ def division (a,b):
    return float(a/b)
 def modulo (a,b):
     return a%b 
-def exponente (a,b):  #Falta que se pueda ingresar decimal
+def potencia (a,b):  #Falta que se pueda ingresar decimal
     return float(a**b)
 def raiz (a,b):
     return math.sqrt(a,b)
@@ -73,8 +74,15 @@ def primosrang (a,b):
 
 
 if (n==1) : #Suma
-    print "SUMA"
-    print ""
+    print "---SUMA---"
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Suma---"
+        print "(1) Ingresar la cantidad de numeros a sumar"
+        print "(2) Ingresar las cifras individualmente y presionar 'Enter' para registrarlas"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
     a=int(raw_input("Escriba cantidad de numeros a sumar: "))
     i=0
     r=0
@@ -83,10 +91,19 @@ if (n==1) : #Suma
         r=r+b
         i=i+1
     print "El resultado de la suma es: " +str(suma(r))
+    print ""
 
 elif (n==2): #Multiplicacion
-    print "MULTIPLICACION"
+    print "---MULTIPLICACION---"
     print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Multiplicacion---"
+        print "(1) Ingresar la cantidad de numeros a multiplicar"
+        print "(2) Ingresar las cifras individualmente y presionar 'Enter' para registrarlas"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
     a=int(raw_input("Escriba cantidad de numeros a multiplicar: "))
     i=0
     r=1
@@ -97,29 +114,63 @@ elif (n==2): #Multiplicacion
     print "El resultado de la multiplicacion es: " +str(multiplicacion(r))
 
 elif (n==3): #Division
-    print "DIVISION"
+    print "---DIVISION---"
     print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Division---"
+        print "* El programa solo imprime el resultado de la division"
+        print "(1) Ingresar el dividendo [El numero a dividir]"
+        print "(2) Ingresar el divisor [El numero que dividirá al dividendo]"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
     a=float(raw_input("Escriba el dividendo: "))
     b=float(raw_input("Escriba el divisor: "))
     print "Su resultado es: " +str(division(a,b))
 
 elif (n==4): #Modulo
-    print "MODULO"
+    print "---MODULO---"
     print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Modulo---"
+        print "* El programa solo imprime el residuo de la division"
+        print "(1) Ingresar el dividendo [El numero a dividir]"
+        print "(2) Ingresar el divisor [El numero que dividirá al dividendo]"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
     a=int(raw_input("Escriba el dividendo : "))
     b=int(raw_input("Escriba el divisor: "))
     print "Su resultado es: " +str(modulo(a,b))
 
-elif (n==5): #Exponente
-    print "EXPONENTE"
+elif (n==5): #Potencia
+    print "---POTENCIA---"
     print ""
-    a=float(raw_input("Escriba el primer numero: "))
-    b=float(raw_input("Escriba el segundo numero: "))
-    print "Su resultado es: " +str(exponente(a,b))
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Potencia---"
+        print "(1) Ingresar el numero base [El numero a potenciar]"
+        print "(2) Ingresar el exponente [El numero de veces que la base se multiplicara a si misma]"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
+    a=float(raw_input("Escriba el numero base: "))
+    b=float(raw_input("Escriba el exponente: "))
+    print "Su resultado es: " +str(potencia(a,b))
 
 elif (n==6): #Raiz
-    print "RAIZ"
+    print "---RAIZ---"
     print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Raiz---"
+        print "(1) Ingresar el radicando [El numero del cual se obtendrá la raiz]"
+        print "(2) Ingresar el indice [La raiz de la cual se obtendrá el resultado]"
+        print "(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'"
+        print ""
     a=2
     b=int(raw_input("Escriba numero del radicando: "))
     a=int(raw_input("Escriba a que numero de indice: "))
@@ -128,34 +179,16 @@ elif (n==6): #Raiz
         a=2
     print "Su resultado es: " +str(math.sqrt(b))
 
-elif (n==7): #Binario a Hexadecimal -- Falta completar
-    print "BINARIO -> HEXADECIMAL" 
-    print "" 
-
-elif (n==8): #Binario a Decimal -- Falta completar
-    print "DECIMAL -> HEXADECIMAL"
-    print ""
-
-elif (n==9): #Decimal a Hexadecimal -- Falta completar
-    print "DECIMAL -> HEXADECIMAL"
-    print ""
-
-elif (n==10): #Decimal a Binario
-    print "DECIMAL -> BINARIO"
-    print ""
-    numero=int(raw_input("Ingrese un numero: "))
-    a=[]
-    while(numero>0):
-        if(numero%2==0):
-            a.append(0)
-        else:
-            a.append(1)
-        numero=numero/2
-    a.reverse()
-    print "Su resultado es: " +  str(DaB(a))
-
-elif (n==13): #Numero Primo por Ingreso
-    print "NUMEROS PRIMOS POR INGRESO"
+elif (n==7): #Verificacion de numeros primos
+    print "---VERIFICACION DE NUMEROS PRIMOS---"
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Numeros Primos por Verificacion---"
+        print "(1) Ingresar una cifra para verificar si es numero primo o no"
+        print "(2) Una vez ingresado el numero el programa evaluara el numero"
+        print "(3) Como resultado, el programa le dira si su numero es primo o no"
+        print ""
     a=0
     n=int(raw_input("Ingrese numero para verificar si es primo: "))
     for i in range(1,n+1):
@@ -168,17 +201,88 @@ elif (n==13): #Numero Primo por Ingreso
         print "El numero "+(str(n)+" si es primo")
         print ""
 
+elif (n==8): #Numero Primo por Rango
+    a=0
+    print "---NUMEROS PRIMOS POR RANGO---"
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Numeros Primos por Rango---"
+        print "(1) Ingresar una cifra para ponerlo como limite de la lista"
+        print "(2) Una vez ingresado el numero el programa evaluara los numeros primos"
+        print "(3) Como resultado, se generara una lista de numeros primos hasta el numero limite"
+        print ""
+    lim=int(raw_input("Ingrese el limite de la lista de numeros primos: "))
+    print ""
+    print "La lista de numeros primos hasta el numero "+str(lim)+" es:"
+    for x in range (2,lim):
+        prnt=False
+        for i in range(2,x):
+            if(x % i==0):
+                break
+            else:
+                if (prnt==False):
+                    print str(x)
+                    prnt=True
+    print ""
+
+
+elif (n==9): #Binario a Hexadecimal -- Falta completar
+    print "BINARIO -> HEXADECIMAL" 
+    print "" 
+
+elif (n==10): #Binario a Decimal -- Falta completar
+    print "DECIMAL -> HEXADECIMAL"
+    print ""
+
+elif (n==11): #Decimal a Hexadecimal -- Falta completar
+    print "DECIMAL -> HEXADECIMAL"
+    print ""
+
+elif (n==12): #Decimal a Binario
+    print "---DECIMAL -> BINARIO---"
+    print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Decimal -> Binario---"
+        print "(1) Ingresar una cifra para converir el numero en binario"
+        print "(2) Una vez ingresado el numero, lo trasladara a binario"
+        print "(3) Como resultado, el programa le dira el numero que ingreso, pero en binario"
+        print ""
+    numero=int(raw_input("Ingrese un numero: "))
+    a=[]
+    while(numero>0):
+        if(numero%2==0):
+            a.append(0)
+        else:
+            a.append(1)
+        numero=numero/2
+    a.reverse()
+    print "Su resultado es: " +  str(DaB(a))
+
+elif (n==13): #Hexadecimal a Binario
+    print "HEXADECIMAL -> BINARIO"
+
+elif (n==14): #Hexadecimal a Decimal
+    print "HEXADECIMAL -> DECIMAL"
+
 elif (n==15): #Calculadora de IMC
     print "CALCULADORA DE INDICE DE MASA CORPORAL"
+    print ""
+    hlp=str(raw_input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    print ""     
+    if (hlp=="h" or hlp=="H"):
+        print "---Ayuda de Calculadora de IMC---"
+        print "(1) Ingresar su peso en kg. [Kilogramo: 1kg = 1000gr.]"
+        print "(2) Ingresar su altura en mt. [Metro: 1mt. = 100cm.]"
+        print "(3) Como resultado, el programa le dira su indice de masa corporal."
+        print ""
     pes=int(raw_input("Ingrese su peso en Kg (Kilogramos): "))
     alt=float(raw_input("Ingrese un altura en Mt (Metros): "))
     imc=(pes/(alt**2))
     print "Su IMC es de: "+str(imc)
     print ""
-
-elif (n=="h" or n=="H"): #Menu de Ayuda
-    print "MENU DE AYUDA"
-    print ""
-
+   
 else:
     print "No existe ese valor"
