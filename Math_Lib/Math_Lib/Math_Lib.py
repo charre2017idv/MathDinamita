@@ -276,8 +276,11 @@ elif (n==13): #Hexadecimal a Binario
     print "HEXADECIMAL -> BINARIO"
     print ("")
     while True:
-        print ("Que numero hexadecimal quiere convertir: ")
-        hexdec=int(input())
+    print ()
+    hexdec=input("Ingrese su numero en hexadecimal: ")
+    if (hexdec == 'x'):
+        break
+    else:
         dec = int(hexdec, 16)
         print (hexdec + "en Decimal es: " + str(dec) +"\n")
 
