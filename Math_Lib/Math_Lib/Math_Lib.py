@@ -280,7 +280,7 @@ elif (n==14): #Hexadecimal a Decimal
     print ("")
     while True:
         print ("Que numero hexadecimal quiere convertir: ")
-        hexdec=int(input())
+        hexdec=int(raw_input())
         dec = int(hexdec, 16)
         print (hexdec + "en Decimal es: " + str(dec) +"\n")
 
