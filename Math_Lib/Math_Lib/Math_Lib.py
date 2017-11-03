@@ -278,11 +278,11 @@ elif (n==13): #Hexadecimal a Binario
 elif (n==14): #Hexadecimal a Decimal
     print ("HEXADECIMAL -> DECIMAL")
     print ("")
-    while True:
-        print ("Que numero hexadecimal quiere convertir: ")
-        hexdec=int(input())
-        dec = int(hexdec, 16) # En esta linea ha que definir porque no esta cambiando a decimal 
-        print (hexdec + "en Decimal es: " + str(dec) +"\n")
+    # Se hizo la modificacion para que la funcion hexdec funcionara
+    print ("Que numero hexadecimal quiere convertir: ")
+    hexdec=(input("Ingresa el numero en hexadecimal: "))
+    dec = int(hexdec, 16) 
+    print (hexdec + " en Decimal es: " + str(dec) +"\n")
 
 elif (n==15): #Calculadora de IMC
     print ("CALCULADORA DE INDICE DE MASA CORPORAL")
