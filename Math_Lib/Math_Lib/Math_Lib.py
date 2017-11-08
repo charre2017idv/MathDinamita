@@ -7,6 +7,8 @@ print ("-"*50)
 print ("Las funciones que puede realizar la libreria son las siguientes:")
 print ("")
 
+print ("FUNCIONES BASICAS:")
+print ("")
 print ("-(1) Suma ")
 print ("-(2) Multiplicacion ")
 print ("-(3) Division")
@@ -75,7 +77,7 @@ def primosrang (a,b):
 
 if (n==1) : #Suma
     print ("---SUMA---")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Suma---")
@@ -96,7 +98,7 @@ if (n==1) : #Suma
 elif (n==2): #Multiplicacion
     print ("---MULTIPLICACION---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Multiplicacion---")
@@ -116,7 +118,7 @@ elif (n==2): #Multiplicacion
 elif (n==3): #Division
     print ("---DIVISION---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Division---")
@@ -132,7 +134,7 @@ elif (n==3): #Division
 elif (n==4): #Modulo
     print ("---MODULO---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Modulo---")
@@ -148,7 +150,7 @@ elif (n==4): #Modulo
 elif (n==5): #Potencia
     print ("---POTENCIA---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("") 
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Potencia---")
@@ -163,7 +165,7 @@ elif (n==5): #Potencia
 elif (n==6): #Raiz
     print ("---RAIZ---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Raiz---")
@@ -181,11 +183,11 @@ elif (n==6): #Raiz
 
 elif (n==7): #Verificacion de numeros primos
     print ("---VERIFICACION DE NUMEROS PRIMOS---")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Numeros Primos por Verificacion---")
-        print ("(1) Ingresar una cifra para verificar si es numero primo o no")
+        print ("(1) Ingrese una cifra o numero entero cualquiera")
         print ("(2) Una vez ingresado el numero el programa evaluara el numero")
         print ("(3) Como resultado, el programa le dira si su numero es primo o no")
         print ("")
@@ -201,29 +203,36 @@ elif (n==7): #Verificacion de numeros primos
         print ("El numero "+(str(n)+" si es primo"))
         print ("")
 
+    """NUMERO PRIMO POR RANGO
+    La función demostrara si el numero que ha ingresado el usuario es numero primo o no.
+    El programa verificara si cada numero dentro del rango es multiplo de sus anteriores.
+    Caso 1: En caso de que encuentre un multiplo, el numero sera desechado por la funcion.
+    Caso 2: Si el numero demuestra que no es multiplo de nunguno, sera imprimido en pantalla"""
+
 elif (n==8): #Numero Primo por Rango
     a=0
     print ("---NUMEROS PRIMOS POR RANGO---")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Numeros Primos por Rango---")
         print ("(1) Ingresar una cifra para ponerlo como limite de la lista")
-        print ("(2) Una vez ingresado el numero el programa evaluara los numeros primos")
+        print ("(2) Una vez ingresado el numero el programa evaluara los numeros primos dentro del rango")
         print ("(3) Como resultado, se generara una lista de numeros primos hasta el numero limite")
         print ("")
     lim=int(input("Ingrese el limite de la lista de numeros primos: "))
     print ("")
     print ("La lista de numeros primos hasta el numero "+str(lim)+" es:")
+    print ("")
     for x in range (2,lim):
         prnt=False
-        for i in range(2,x):
+        verf=0
+        for i in range(1,x+1):
             if(x % i==0):
-                break
-            else:
-                if (prnt==False):
-                    print (str(x))
-                    prnt=True
+                verf=verf+1
+        if (prnt==False and verf<3):
+            print (str(x))
+            prnt=True
     print ("")
 
 elif (n==9): #Binario a Hexadecimal -- Falta completar
@@ -237,7 +246,7 @@ elif (n==10): #Binario a Decimal -- Falta completar
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Decimal -> Hexadecimal---")
@@ -252,7 +261,7 @@ elif (n==11): #Decimal a Hexadecimal
 elif (n==12): #Decimal a Binario
     print ("---DECIMAL -> BINARIO---")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Decimal -> Binario---")
@@ -278,21 +287,35 @@ elif (n==13): #Hexadecimal a Binario
 elif (n==14): #Hexadecimal a Decimal
     print ("HEXADECIMAL -> DECIMAL")
     print ("")
+    lp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("")     
+    if (hlp=="h" or hlp=="H"):
+        print ("---Ayuda de Hexadecimal -> Decimal---")
+        print ("(1) Escriba una cifra en sistema hexadecimal [Numeros y A,B,C,D,E,F son admitidos]")
+        print ("(2) Presione 'Enter' para que el programa lo convierta a decimal")
+        print ("(3) Como resultado, se mostrara el numero en sistema decimal")
+        print ("")
     while True:
-        print ("Que numero hexadecimal quiere convertir: ")
+        print ("Ingrese una cifra en hexadecimal: ")
         hexdec=int(input())
         dec = int(hexdec, 16) # En esta linea ha que definir porque no esta cambiando a decimal 
         print (hexdec + "en Decimal es: " + str(dec) +"\n")
+        print ("")
+
+    """CALCULADORA DE IMC
+    El proposito de esta funcion es el de calcular el indice de masa corporal del usuario.
+    Los datos del usuario (Peso y Altura) se utilizan como variables para obtener el dato.
+    El peso se divide entre la altura en metros al cuadrado."""
 
 elif (n==15): #Calculadora de IMC
     print ("CALCULADORA DE INDICE DE MASA CORPORAL")
     print ("")
-    hlp=str(input("Si necesita ayuda con respecto a la funcion, presione 'h': "))
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Calculadora de IMC---")
-        print ("(1) Ingresar su peso en kg. [Kilogramo: 1kg = 1000gr.]")
-        print ("(2) Ingresar su altura en mt. [Metro: 1mt. = 100cm.]")
+        print ("(1) Ingrese su peso en kg. [Kilogramo: 1kg = 1000gr.]")
+        print ("(2) Ingrese su altura en mt. [Metro: 1mt. = 100cm.]")
         print ("(3) Como resultado, el programa le dira su indice de masa corporal.")
         print ("")
     pes=int(input("Ingrese su peso en Kg (Kilogramos): "))
