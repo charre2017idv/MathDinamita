@@ -284,11 +284,15 @@ elif (n==12): #Decimal a Binario
 elif (n==13): #Hexadecimal a Binario
     print ("HEXADECIMAL -> BINARIO")
 
+    """ En esta funcion se puede calcular un numero de hexadecimal a un numero decimal
+    comenzando por iniciar un ciclo que niegue letras fuera del patron del hexadecima
+    en este caso solo se permiten de la A a la F."""
+
 elif (n==14): #Hexadecimal a Decimal
     print ("HEXADECIMAL -> DECIMAL")
     print ("")
-    lp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
-        print ("---Ayuda de Hexadecimal -> Decimal---")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("---Ayuda de Hexadecimal -> Decimal---")
     print ("")     
     if (hlp=="h" or hlp=="H"):
         print ("(3) Como resultado, se mostrara el numero en sistema decimal")
@@ -296,10 +300,16 @@ elif (n==14): #Hexadecimal a Decimal
         print ("(1) Escriba una cifra en sistema hexadecimal [Numeros y A,B,C,D,E,F son admitidos]")
         print ("")
     # Se hizo la modificacion para que la funcion hexdec funcionara
+
     print ("Que numero hexadecimal quiere convertir: ")
-    hexdec=(input("Ingresa el numero en hexadecimal: "))
+    hexdec=(input("Ingresa el numero en hexadecimal: ")) 
+    while (hexdec >= 'g'):
+        print ("No")
+        hexdec=(input("Ingresa el numero en hexadecimal: "))
+
     dec = int(hexdec, 16) 
     print (hexdec + " en Decimal es: " + str(dec) +"\n")
+
 
     """CALCULADORA DE IMC
     El proposito de esta funcion es el de calcular el indice de masa corporal del usuario.
