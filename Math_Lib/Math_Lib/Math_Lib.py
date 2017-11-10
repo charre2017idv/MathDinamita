@@ -304,7 +304,7 @@ elif (n==14): #Hexadecimal a Decimal
     print ("Que numero hexadecimal quiere convertir: ")
     hexdec=(input("Ingresa el numero en hexadecimal: ")) 
     while (hexdec >= 'g'):
-        print ("No")
+        print ("No es una letra valida")
         hexdec=(input("Ingresa el numero en hexadecimal: "))
 
     dec = int(hexdec, 16) 
