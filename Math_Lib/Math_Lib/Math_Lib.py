@@ -288,19 +288,18 @@ elif (n==14): #Hexadecimal a Decimal
     print ("HEXADECIMAL -> DECIMAL")
     print ("")
     lp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+        print ("---Ayuda de Hexadecimal -> Decimal---")
     print ("")     
     if (hlp=="h" or hlp=="H"):
-        print ("---Ayuda de Hexadecimal -> Decimal---")
-        print ("(1) Escriba una cifra en sistema hexadecimal [Numeros y A,B,C,D,E,F son admitidos]")
-        print ("(2) Presione 'Enter' para que el programa lo convierta a decimal")
         print ("(3) Como resultado, se mostrara el numero en sistema decimal")
+        print ("(2) Presione 'Enter' para que el programa lo convierta a decimal")
+        print ("(1) Escriba una cifra en sistema hexadecimal [Numeros y A,B,C,D,E,F son admitidos]")
         print ("")
-    while True:
-        print ("Ingrese una cifra en hexadecimal: ")
-        hexdec=int(input())
-        dec = int(hexdec, 16) # En esta linea ha que definir porque no esta cambiando a decimal 
-        print (hexdec + "en Decimal es: " + str(dec) +"\n")
-        print ("")
+    # Se hizo la modificacion para que la funcion hexdec funcionara
+    print ("Que numero hexadecimal quiere convertir: ")
+    hexdec=(input("Ingresa el numero en hexadecimal: "))
+    dec = int(hexdec, 16) 
+    print (hexdec + " en Decimal es: " + str(dec) +"\n")
 
     """CALCULADORA DE IMC
     El proposito de esta funcion es el de calcular el indice de masa corporal del usuario.
