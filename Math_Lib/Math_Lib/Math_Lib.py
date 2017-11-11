@@ -28,12 +28,13 @@ print ("-(11) Decimal -> Hexadecimal")
 print ("-(12) Decimal -> Binario")
 print ("-(13) Hexadecimal -> Binario")
 print ("-(14) Hexadecimal -> Decimal")
+print ("-(15) Metros -> Yardas")
 
 print ("")
 
 print ("FUNCIONES ADICIONALES: ")
 print ("")
-print ("-(15) Indice de Masa Corporal [IMC]")
+print ("-(19) Indice de Masa Corporal [IMC]")
 print ("")
 print ("-"*50)
 
@@ -311,12 +312,36 @@ elif (n==14): #Hexadecimal a Decimal
     print (hexdec + " en Decimal es: " + str(dec) +"\n")
 
 
+    """METROS A YARDAS
+    Con esta conversion podras facilmente convertir la medida de metro a yardas 
+    Se solicita la cantidad de metros que el usuario quiere transformar luego 
+    multiplica esa cantidad por metro(1)/yarda(.914) y muestra el resultado """
+elif (n==15): #Metros a Yardas
+    print ("METROS -> YARDAS")
+    print ("")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("---Metros -> Yardas---")
+    print ("")  
+    if (hlp=="h" or hlp=="H"):
+        print ("(3) Como resultado, se mostrara la conversi[on de metros(m) a yardas(yd)")
+        print ("(2) Presione 'Enter' para que el programa lo convierta a Yardas")
+        print ("(1) Escriba la cantidad de metros que desea convertir")
+        print ("")
+    metros=input("¿Cuantos metros quieres convertir a yardas? ")
+    while (metros==""):
+        print ("")
+        print ("Porfavor escoja no deje ese espacio vacio ")
+        metros=input("¿Cuantos metros quieres convertir a yardas? ")
+    conversion= int(metros)*(int(1)/float(.914))
+    print ("Sus metros en yardas son: "+ str(conversion)+"yd")
+
+
     """CALCULADORA DE IMC
     El proposito de esta funcion es el de calcular el indice de masa corporal del usuario.
     Los datos del usuario (Peso y Altura) se utilizan como variables para obtener el dato.
     El peso se divide entre la altura en metros al cuadrado."""
 
-elif (n==15): #Calculadora de IMC
+elif (n==19): #Calculadora de IMC
     print ("CALCULADORA DE INDICE DE MASA CORPORAL")
     print ("")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
