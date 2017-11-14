@@ -242,8 +242,35 @@ elif (n==9): #Binario a Hexadecimal -- Falta completar
     print ("") 
 
 elif (n==10): #Binario a Decimal -- Falta completar
-    print ("DECIMAL -> HEXADECIMAL")
+    print ("BINARIO -> DECIMAL")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")
+    if (hlp=="h" or hlp=="H"):
+        print ("---Ayuda de Binario a Decimal---")
+        print ("(1) Ingresar un numero en binario(Recuerde que estos solo llevan 0 y 1) y luego presionar 'Enter'")
+        print ("(2) Al recibir su numero en forma decimal aparecera una pregunta")
+        print ("(3) Presione '1' seguido de un 'Enter' para poder introducir otro numero o presione '0' seguido de un 'Enter' para terminar el programa")
+        print ("")
+    respuesta=1
+
+    while(respuesta==1):
+#Primero le pedimos al usuario su numero en binario
+        binario=input("Introduzca un numero en binario: ")
+        if(binario is not int):
+            try:
+#Convertimos la variable a entero para que pueda haer las siguientes
+#Comparaciones
+                binario=int(binario)
+                if(binario>2):
+                    decimal=int(str(binario), 2)
+                    print ("\nSu numero en decimal es: ")+ str(decimal)
+#La ultima opcion restante es que sean numeros que no sean 0 o 1
+                else:
+                    print ("Los numeros binarios solo llevan 0 y 1")
+#Pero si no son numeros pasara lo siguiente
+            except:
+                print ("Las letras no se pueden convertir a decimal")
+        respuesta=int(input("Va a introducir otro numero:<Si[1] No[0]>"))
 
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
