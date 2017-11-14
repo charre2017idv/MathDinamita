@@ -270,16 +270,40 @@ elif (n==12): #Decimal a Binario
         print ("(2) Una vez ingresado el numero, se trasladara a 1s y 0s")
         print ("(3) Como resultado, el programa le dira el numero que ingreso, pero en binario")
         print ("")
-    numero=int(input("Ingrese una cifra en decimal: "))
-    a=[]
-    while(numero>0):
-        if(numero%2==0):
-            a.append(0)
-        else:
-            a.append(1)
-        numero=numero/2
-    a.reverse()
-    print ("Su resultado es: " +  str(DaB(a)))
+    respuesta=1
+
+    while(respuesta==1):
+        numero=raw_input("Ingrese un numero: ")
+        r=[]
+    #Las letras y los decimales no se pueden pasar a binario
+        if(numero is not int):
+            try:
+                numero = int(numero)
+                if(numero==0):
+                    print"0 no se puede convertir a binario"
+                    raw_input()
+                elif(numero<0):
+                    print"Los numeros menores a 0 no se pueden convertir a binario"
+                    raw_input()
+        
+                elif(numero>0):
+                    while(numero>0):
+                #Si el residuo de dividir el elemento[n] del numero entre 2 da 0
+                #Agregamos 0 a la lista, de lo contratrio agregamos 1
+                        if(numero%2==0):
+                            r.append(0)
+                        else:
+                            r.append(1)
+                        numero=numero/2
+    #Al tener la lista la invertimos para tener el numero binario verdadero
+                r.reverse()
+                print r
+            except:
+                print"Las letras y los numeros decimales no se pueden convertir a binario"
+#El numero tiene que ser mayor que 0 porque los numeros
+#menores o iguales no se puede convertir a binario
+        respuesta=int(raw_input("¿Quieres ingresar otro numero? (Si[1]  No[0])"))
+
     print ("")
 
 elif (n==13): #Hexadecimal a Binario
