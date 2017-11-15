@@ -255,9 +255,16 @@ elif (n==11): #Decimal a Hexadecimal
         print ("(2) Una vez ingresado el numero, se trasladara a decimal pero contando A, B, C, D, E y F como numeros también.")
         print ("(3) Como resultado, el programa le dira el numero que ingreso, pero usando los dieciseis numeros")
         print ("")
+    
     a=int(input("Ingrese una cifra en decimal: "))
+    while (a == str):
+        print ("No es valido")
+        a=int(input("Ingrese una cifra en decimal:"))
     print ("Su resultado es: " + format(a, '02x'))
     print ("")
+   
+
+            
 
 elif (n==12): #Decimal a Binario
     print ("---DECIMAL -> BINARIO---")
@@ -273,18 +280,18 @@ elif (n==12): #Decimal a Binario
     respuesta=1
 
     while(respuesta==1):
-        numero=raw_input("Ingrese un numero: ")
+        numero=input("Ingrese un numero: ")
         r=[]
     #Las letras y los decimales no se pueden pasar a binario
         if(numero is not int):
             try:
                 numero = int(numero)
                 if(numero==0):
-                    print"0 no se puede convertir a binario"
-                    raw_input()
+                    print ("0 no se puede convertir a binario")
+                    input()
                 elif(numero<0):
-                    print"Los numeros menores a 0 no se pueden convertir a binario"
-                    raw_input()
+                    print ("Los numeros menores a 0 no se pueden convertir a binario")
+                    input()
         
                 elif(numero>0):
                     while(numero>0):
@@ -297,12 +304,12 @@ elif (n==12): #Decimal a Binario
                         numero=numero/2
     #Al tener la lista la invertimos para tener el numero binario verdadero
                 r.reverse()
-                print r
+                print (r)
             except:
-                print"Las letras y los numeros decimales no se pueden convertir a binario"
+                print ("Las letras y los numeros decimales no se pueden convertir a binario")
 #El numero tiene que ser mayor que 0 porque los numeros
 #menores o iguales no se puede convertir a binario
-        respuesta=int(raw_input("¿Quieres ingresar otro numero? (Si[1]  No[0])"))
+        respuesta=int(input("¿Quieres ingresar otro numero? (Si[1]  No[0])"))
 
     print ("")
 
