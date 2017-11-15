@@ -244,6 +244,12 @@ elif (n==10): #Binario a Decimal -- Falta completar
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
 
+    '''Esta funcion de DaH empieza pideiendole al usuario una cifra de entero,
+    si el valor que se le pone no es un numero, este marcara un error.
+
+    .isdigit() cumple la funcion de revisar si existen puros numeros y de este modo
+    no acepte caracteres de letra.'''
+
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
@@ -255,15 +261,15 @@ elif (n==11): #Decimal a Hexadecimal
         print ("(2) Una vez ingresado el numero, se trasladara a decimal pero contando A, B, C, D, E y F como numeros también.")
         print ("(3) Como resultado, el programa le dira el numero que ingreso, pero usando los dieciseis numeros")
         print ("")
+
     
-    a=int(input("Ingrese una cifra en decimal: "))
-    while (a == str):
-        print ("No es valido")
-        a=int(input("Ingrese una cifra en decimal:"))
+    a=(input("Ingrese una cifra en decimal: "))
+    while (not a.isdigit()):
+        print ("Solo se aceptan numeros.")
+        a=(input("Ingrese una cifra en decimal: "))
+    a=int(a)
     print ("Su resultado es: " + format(a, '02x'))
     print ("")
-   
-
             
 
 elif (n==12): #Decimal a Binario
