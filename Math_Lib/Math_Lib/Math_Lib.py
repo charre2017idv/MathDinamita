@@ -29,6 +29,7 @@ print ("-(12) Decimal -> Binario")
 print ("-(13) Hexadecimal -> Binario")
 print ("-(14) Hexadecimal -> Decimal")
 print ("-(15) Metros -> Yardas")
+print ("-(16) Yardas -> Metros")
 
 print ("")
 
@@ -38,9 +39,9 @@ print ("-(19) Indice de Masa Corporal [IMC]")
 print ("")
 print ("-"*50)
 
-while (n<1 or n>15):
+while (n<1 or n>16):
     n=int(input("Escriba el numero de la funcion a realizar: "))
-    if (n<1 or n>15):
+    if (n<1 or n>16):
         print ("Ese numero es invalido. Por favor, ingrese una opcion permitida")
         print ("")
 print ("-"*50)
@@ -241,8 +242,35 @@ elif (n==9): #Binario a Hexadecimal -- Falta completar
     print ("") 
 
 elif (n==10): #Binario a Decimal -- Falta completar
-    print ("DECIMAL -> HEXADECIMAL")
+    print ("BINARIO -> DECIMAL")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
     print ("")
+    if (hlp=="h" or hlp=="H"):
+        print ("---Ayuda de Binario a Decimal---")
+        print ("(1) Ingresar un numero en binario(Recuerde que estos solo llevan 0 y 1) y luego presionar 'Enter'")
+        print ("(2) Al recibir su numero en forma decimal aparecera una pregunta")
+        print ("(3) Presione '1' seguido de un 'Enter' para poder introducir otro numero o presione '0' seguido de un 'Enter' para terminar el programa")
+        print ("")
+    respuesta=1
+
+    while(respuesta==1):
+#Primero le pedimos al usuario su numero en binario
+        binario=input("Introduzca un numero en binario: ")
+        if(binario is not int):
+            try:
+#Convertimos la variable a entero para que pueda haer las siguientes
+#Comparaciones
+                binario=int(binario)
+                if(binario>2):
+                    decimal=int(str(binario), 2)
+                    print ("\nSu numero en decimal es: ")+ str(decimal)
+#La ultima opcion restante es que sean numeros que no sean 0 o 1
+                else:
+                    print ("Los numeros binarios solo llevan 0 y 1")
+#Pero si no son numeros pasara lo siguiente
+            except:
+                print ("Las letras no se pueden convertir a decimal")
+        respuesta=int(input("Va a introducir otro numero:<Si[1] No[0]>"))
 
     '''Esta funcion de DaH empieza pideiendole al usuario una cifra de entero,
     si el valor que se le pone no es un numero, este marcara un error.
@@ -293,10 +321,10 @@ elif (n==12): #Decimal a Binario
             try:
                 numero = int(numero)
                 if(numero==0):
-                    print ("0 no se puede convertir a binario")
+                    print("0 no se puede convertir a binario")
                     input()
                 elif(numero<0):
-                    print ("Los numeros menores a 0 no se pueden convertir a binario")
+                    print("Los numeros menores a 0 no se pueden convertir a binario")
                     input()
         
                 elif(numero>0):
@@ -312,7 +340,7 @@ elif (n==12): #Decimal a Binario
                 r.reverse()
                 print (r)
             except:
-                print ("Las letras y los numeros decimales no se pueden convertir a binario")
+                print("Las letras y los numeros decimales no se pueden convertir a binario")
 #El numero tiene que ser mayor que 0 porque los numeros
 #menores o iguales no se puede convertir a binario
         respuesta=int(input("¿Quieres ingresar otro numero? (Si[1]  No[0])"))
@@ -371,6 +399,18 @@ elif (n==15): #Metros a Yardas
         metros=input("¿Cuantos metros quieres convertir a yardas? ")
     conversion= int(metros)*(int(1)/float(.914))
     print ("Sus metros en yardas son: "+ str(conversion)+"yd")
+
+    """YARDAS A METROS
+  Con esta funcion podras transformar Yardas(yd) a Metros(m) en base a una operacion 
+  basada en regla de 3; multiplicando el numero de yardas por el el equivalente de 
+  un metro pero en medias de yardas y dividiendoloe entre 1 para asi mostrar la conversion"""
+elif (n==16): #yardas a metros
+    yardas=input("Ingrese el numero de Yardas que quiere transformar a metros: ")
+    while (yardas==""):
+        print("Porfavor no deje ese espacio en blanco")
+        yardas=input("Podria ingresar otra vez el numero?: ")
+    Conversion= int(yardas)*float(.9144)/int(1)
+    print ("Sus yardas transformadas a metros son: "+str(Conversion)+"m")
 
 
     """CALCULADORA DE IMC
