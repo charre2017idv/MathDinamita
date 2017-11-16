@@ -39,9 +39,9 @@ print ("-(19) Indice de Masa Corporal [IMC]")
 print ("")
 print ("-"*50)
 
-while (n<1 or n>16):
+while (n<1 or n>19):
     n=int(input("Escriba el numero de la funcion a realizar: "))
-    if (n<1 or n>16):
+    if (n<1 or n>19):
         print ("Ese numero es invalido. Por favor, ingrese una opcion permitida")
         print ("")
 print ("-"*50)
@@ -222,7 +222,13 @@ elif (n==8): #Numero Primo por Rango
         print ("(2) Una vez ingresado el numero el programa evaluara los numeros primos dentro del rango")
         print ("(3) Como resultado, se generara una lista de numeros primos hasta el numero limite")
         print ("")
-    lim=int(input("Ingrese el limite de la lista de numeros primos: "))
+
+    lim=(input("Ingrese el limite de la lista de numeros primos: "))
+    while (not lim.isdigit()):
+        print ("Solo se aceptan numeros.")
+        print ("")
+        lim=(input("Ingrese el limite de la lista de numeros primos: "))
+    lim=int(lim)
     print ("")
     print ("La lista de numeros primos hasta el numero "+str(lim)+" es:")
     print ("")
@@ -247,7 +253,7 @@ elif (n==10): #Binario a Decimal -- Falta completar
     print ("")
     if (hlp=="h" or hlp=="H"):
         print ("---Ayuda de Binario a Decimal---")
-        print ("(1) Ingresar un numero en binario(Recuerde que estos solo llevan 0 y 1) y luego presionar 'Enter'")
+        print ("(1) Ingresar un numero en binario (Recuerde que estos solo llevan 0 y 1) y luego presionar 'Enter'")
         print ("(2) Al recibir su numero en forma decimal aparecera una pregunta")
         print ("(3) Presione '1' seguido de un 'Enter' para poder introducir otro numero o presione '0' seguido de un 'Enter' para terminar el programa")
         print ("")
@@ -258,12 +264,12 @@ elif (n==10): #Binario a Decimal -- Falta completar
         binario=input("Introduzca un numero en binario: ")
         if(binario is not int):
             try:
-#Convertimos la variable a entero para que pueda haer las siguientes
+#Convertimos la variable a entero para que pueda hacer las siguientes
 #Comparaciones
                 binario=int(binario)
                 if(binario>2):
                     decimal=int(str(binario), 2)
-                    print ("\nSu numero en decimal es: ")+ str(decimal)
+                    print ("\nSu numero en decimal es: ")+str(decimal)
 #La ultima opcion restante es que sean numeros que no sean 0 o 1
                 else:
                     print ("Los numeros binarios solo llevan 0 y 1")
@@ -290,7 +296,6 @@ elif (n==11): #Decimal a Hexadecimal
         print ("(3) Como resultado, el programa le dira el numero que ingreso, pero usando los dieciseis numeros")
         print ("")
 
-    
     a=(input("Ingrese una cifra en decimal: "))
     while (not a.isdigit()):
         print ("Solo se aceptan numeros.")
@@ -429,9 +434,21 @@ elif (n==19): #Calculadora de IMC
         print ("(2) Ingrese su altura en mt. [Metro: 1mt. = 100cm.]")
         print ("(3) Como resultado, el programa le dira su indice de masa corporal.")
         print ("")
-    pes=int(input("Ingrese su peso en Kg (Kilogramos): "))
-    alt=float(input("Ingrese un altura en Mt (Metros): "))
-    imc=(pes/(alt**2))
+
+    pes=(input("Ingrese su peso en Kg (Kilogramos): "))
+    while (not pes.isdigit()):
+        print ("Solo se aceptan numeros.")
+        print ("")
+        pes=(input("Ingrese su peso en Kg (Kilogramos): "))
+    pes=int(pes)
+
+    alt=(input("Ingrese su altura en Cm (Centimetros): "))
+    while (not alt.isdigit()):
+        print ("Solo se aceptan numeros.")
+        print ("")
+        alt=(input("Ingrese un altura en Mt (Metros): "))
+    alt=float(alt)
+    imc=(pes/((alt/100)**2))
     print ("Su IMC es de: "+str(imc))
     print ("")
    
