@@ -76,6 +76,9 @@ def primos (a,b):
 def primosrang (a,b):
     return (a,b)
 
+'''SUMA 
+En esta funcion se puede sumar dos variables que el usuario decida y obtener valores numericos nuevos.
+'''
 
 if (n==1) : #Suma
     print ("---SUMA---")
@@ -97,6 +100,8 @@ if (n==1) : #Suma
     print ("El resultado de la suma es: " +str(suma(r)))
     print ("")
 
+    """MULTIPLICACION
+    En esta funcion se pueden multiplicar dos variables dadas por el usuario y asi obtener un nuevo valor numerico """
 elif (n==2): #Multiplicacion
     print ("---MULTIPLICACION---")
     print ("")
@@ -117,6 +122,9 @@ elif (n==2): #Multiplicacion
         i=i+1
     print ("El resultado de la multiplicacion es: " +str(multiplicacion(r)))
 
+    """DIVISION
+   En esta funcion se va a poder dividir dos valores para asi poder obtener un resultado numerico nuevo
+   Se utiliza la funcion de numero flotante para que de decimales"""
 elif (n==3): #Division
     print ("---DIVISION---")
     print ("")
