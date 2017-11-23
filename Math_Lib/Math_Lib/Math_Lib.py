@@ -157,6 +157,10 @@ elif (n==4): #Modulo
     b=int(input("Escriba el divisor: "))
     print ("Su resultado es: " +str(modulo(a,b)))
 
+    """POTENCIA
+    La función calculara un numero elevado a cierta potencia.
+    El usuario puede ingresar el numero base y el exponente que guste para hacer la funcion"""
+
 elif (n==5): #Potencia
     print ("---POTENCIA---")
     print ("")
@@ -171,6 +175,10 @@ elif (n==5): #Potencia
     a=float(input("Escriba el numero base: "))
     b=float(input("Escriba el exponente: "))
     print ("Su resultado es: " +str(potencia(a,b)))
+
+    """RAIZ
+    La función calculara la raiz de un numero cualquiera ingresado por el usuario.
+    El usuario puede poner como parametro el indice y numero que gusten"""
 
 elif (n==6): #Raiz
     print ("---RAIZ---")
@@ -190,6 +198,12 @@ elif (n==6): #Raiz
         print ("Si el valor es menor que 2, el indice se toma al cuadrado por defecto")
         a=2
     print ("Su resultado es: " +str(math.sqrt(b)))
+
+    """VERIFICACION DE NUMEROS PRIMOS
+    La función demostrara si el numero que ha ingresado el usuario es numero primo o no.
+    El programa verificara si el numero ingresado el multiplo de sus anteriores.
+    Caso 1: En caso de que encuentre un multiplo, la función imprimira que no es primo
+    Caso 2: Si el numero demuestra que no es multiplo de nunguno, la función imprimira que si es primo"""
 
 elif (n==7): #Verificacion de numeros primos
     print ("---VERIFICACION DE NUMEROS PRIMOS---")
@@ -214,7 +228,7 @@ elif (n==7): #Verificacion de numeros primos
         print ("")
 
     """NUMERO PRIMO POR RANGO
-    La función demostrara si el numero que ha ingresado el usuario es numero primo o no.
+    La función demostrara la lista de numeros primos, tomando como limite el numero ingresado por el usuario
     El programa verificara si cada numero dentro del rango es multiplo de sus anteriores.
     Caso 1: En caso de que encuentre un multiplo, el numero sera desechado por la funcion.
     Caso 2: Si el numero demuestra que no es multiplo de nunguno, sera imprimido en pantalla"""
