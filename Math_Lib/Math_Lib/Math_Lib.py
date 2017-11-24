@@ -50,7 +50,7 @@ while (n<1 or n>19):
         print ("")
 print ("-"*50)
 os.system("cls")
-
+"""Aqui definimos algunas de las funciones que vamos a ocupar en el repositorio"""
 def suma (a):
     return a
 def multiplicacion (a):
@@ -144,6 +144,8 @@ elif (n==3): #Division
     a=float(input("Escriba el dividendo: "))
     b=float(input("Escriba el divisor: "))
     print ("Su resultado es: " +str(division(a,b)))
+
+    """Aqui implementamos la funcion modulo que es una division que solo nos muestra resultados de enteros """
 
 elif (n==4): #Modulo
     print ("---MODULO---")
@@ -309,7 +311,8 @@ elif (n==10): #Binario a Decimal -- Falta completar
 
     .isdigit() cumple la funcion de revisar si existen puros numeros y de este modo
     no acepte caracteres de letra.'''
-
+    
+    """Aqui hacemos implementamos la funcion decimal a hexadecimal que lo que hace es transformar numeros decimales al codigo hexadecimal """
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
@@ -330,7 +333,7 @@ elif (n==11): #Decimal a Hexadecimal
     print ("Su resultado es: " + format(a, '02x'))
     print ("")
             
-
+    """Aqui hacemos la funcion decimal a binario que se encarga de recibir numeros decimales i tranformarlos a codigo binario"""
 elif (n==12): #Decimal a Binario
     print ("---DECIMAL -> BINARIO---")
     print ("")
