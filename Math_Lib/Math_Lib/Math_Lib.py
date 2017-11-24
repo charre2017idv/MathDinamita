@@ -7,6 +7,8 @@ print ("-"*50)
 print ("Las funciones que puede realizar la libreria son las siguientes:")
 print ("")
 
+'''En esta parte se crea el menú principal'''
+
 print ("FUNCIONES BASICAS:")
 print ("")
 print ("-(1) Suma ")
@@ -39,6 +41,8 @@ print ("-(19) Indice de Masa Corporal [IMC]")
 print ("")
 print ("-"*50)
 
+'''Aqui empezamos a establecer los parametros de lo que sucedera dependiendo
+del numero que introduzca el usuario'''
 while (n<1 or n>19):
     n=int(input("Escriba el numero de la funcion a realizar: "))
     if (n<1 or n>19):
@@ -294,10 +298,10 @@ elif (n==10): #Binario a Decimal -- Falta completar
                     print ("\nSu numero en decimal es: ")+str(decimal)
 #La ultima opcion restante es que sean numeros que no sean 0 o 1
                 else:
-                    print ("Los numeros binarios solo llevan 0 y 1")
+                    print ("Los NUMEROS binarios solo llevan 0 y 1")
 #Pero si no son numeros pasara lo siguiente
             except:
-                print ("Las letras no se pueden convertir a decimal")
+                print ("Los NUMEROS binarios solo llevan 0 y 1")
         respuesta=int(input("Va a introducir otro numero:<Si[1] No[0]>"))
 
     '''Esta funcion de DaH empieza pideiendole al usuario una cifra de entero,
