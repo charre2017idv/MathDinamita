@@ -106,6 +106,7 @@ if (n==1) : #Suma
 
     """MULTIPLICACION
     En esta funcion se pueden multiplicar dos variables dadas por el usuario y asi obtener un nuevo valor numerico """
+
 elif (n==2): #Multiplicacion
     print ("---MULTIPLICACION---")
     print ("")
@@ -129,6 +130,7 @@ elif (n==2): #Multiplicacion
     """DIVISION
    En esta funcion se va a poder dividir dos valores para asi poder obtener un resultado numerico nuevo
    Se utiliza la funcion de numero flotante para que de decimales"""
+
 elif (n==3): #Division
     print ("---DIVISION---")
     print ("")
@@ -313,6 +315,7 @@ elif (n==10): #Binario a Decimal -- Falta completar
     no acepte caracteres de letra.'''
     
     """Aqui hacemos implementamos la funcion decimal a hexadecimal que lo que hace es transformar numeros decimales al codigo hexadecimal """
+
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
@@ -334,6 +337,7 @@ elif (n==11): #Decimal a Hexadecimal
     print ("")
             
     """Aqui hacemos la funcion decimal a binario que se encarga de recibir numeros decimales i tranformarlos a codigo binario"""
+
 elif (n==12): #Decimal a Binario
     print ("---DECIMAL -> BINARIO---")
     print ("")
@@ -415,7 +419,7 @@ elif (n==14): #Hexadecimal a Decimal
     Con esta conversion podras facilmente convertir la medida de metro a yardas 
     Se solicita la cantidad de metros que el usuario quiere transformar luego 
     multiplica esa cantidad por metro(1)/yarda(.914) y muestra el resultado """
-elif (n==15): #Metros a Yardas
+elif (n==15): #Metros a Yardas (Falta completar)
     print ("METROS -> YARDAS")
     print ("")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
@@ -438,7 +442,7 @@ elif (n==15): #Metros a Yardas
   Con esta funcion podras transformar Yardas(yd) a Metros(m) en base a una operacion 
   basada en regla de 3; multiplicando el numero de yardas por el el equivalente de 
   un metro pero en medias de yardas y dividiendoloe entre 1 para asi mostrar la conversion"""
-elif (n==16): #yardas a metros
+elif (n==16): #yardas a metros (Falta comentar)
     yardas=input("Ingrese el numero de Yardas que quiere transformar a metros: ")
     while (yardas==""):
         print("Porfavor no deje ese espacio en blanco")
@@ -452,7 +456,7 @@ elif (n==16): #yardas a metros
     Los datos del usuario (Peso y Altura) se utilizan como variables para obtener el dato.
     El peso se divide entre la altura en metros al cuadrado."""
 
-elif (n==19): #Calculadora de IMC
+elif (n==19): #Calculadora de IMC (Falata comentar)
     print ("CALCULADORA DE INDICE DE MASA CORPORAL")
     print ("")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
