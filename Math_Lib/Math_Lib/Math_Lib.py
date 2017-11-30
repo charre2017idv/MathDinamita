@@ -131,13 +131,17 @@ if (n==1) : #Suma
         print ("(2) Ingresar las cifras individualmente y presionar 'Enter' para registrarlas")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+#A continuación se le pedide al usuario ingresar la cantidad de numeros a sumar
     a=int(input("Escriba cantidad de numeros a sumar: "))
     i=0
     r=0
     while(i<a):
+#Se ingresan los numeros a sumar
         b=int(input("Numero: "))
+#Realizamos la operacion
         r=r+b
         i=i+1
+#Y entregamos el resultado
     print ("El resultado de la suma es: " +str(suma(r)))
     print ("")
 
@@ -154,13 +158,17 @@ elif (n==2): #Multiplicacion
         print ("(2) Ingresar las cifras individualmente y presionar 'Enter' para registrarlas")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+#Se ingresan la cantidad de numeros a multiplicar
     a=int(input("Escriba cantidad de numeros a multiplicar: "))
     i=0
     r=1
     while(i<a):
+#Se ingresan los numeros que seran multiplicados
         b=int(input("Numero: "))
+#Obtenemos el resultado
         r=r*b
         i=i+1
+#Imprimimos el resultado
     print ("El resultado de la multiplicacion es: " +str(multiplicacion(r)))
 
     """DIVISION
@@ -178,8 +186,11 @@ elif (n==3): #Division
         print ("(2) Ingresar el divisor [El numero que dividirá al dividendo]")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+#Pedimos el numero que sera dividido
     a=float(input("Escriba el dividendo: "))
+#Pedimos el numero que va a dividir
     b=float(input("Escriba el divisor: "))
+#Y entregamos el resultado
     print ("Su resultado es: " +str(division(a,b)))
 
     """Aqui implementamos la funcion modulo que es una division que solo nos muestra resultados de enteros """
@@ -196,8 +207,10 @@ elif (n==4): #Modulo
         print ("(2) Ingresar el divisor [El numero que dividirá al dividendo]")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+#Solicitamos divisor y dividendo
     a=int(input("Escriba el dividendo : "))
     b=int(input("Escriba el divisor: "))
+#Entregamos el residuo
     print ("Su resultado es: " +str(modulo(a,b)))
 
     """POTENCIA
@@ -215,8 +228,11 @@ elif (n==5): #Potencia
         print ("(2) Ingresar el exponente [El numero de veces que la base se multiplicara a si misma]")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+#Le pedimos al usuario el numero que sera elevado a una potencia
     a=float(input("Escriba el numero base: "))
+#Le pedimos al usuario la potencia a la que sera elevado el numero
     b=float(input("Escriba el exponente: "))
+#Entregamos el resultado
     print ("Su resultado es: " +str(potencia(a,b)))
 
     """RAIZ
@@ -234,12 +250,16 @@ elif (n==6): #Raiz
         print ("(2) Ingresar el indice [La raiz de la cual se obtendrá el resultado]")
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
+# a es 2 ya que esta es la base para sacar la raiz cuadrada
     a=2
+#Solicitamos los datos al usuario
+#A partir de ahora a puede cambiar si el usuario no quiere sacar raiz cuadrada
     b=int(input("Escriba numero del radicando: "))
     a=int(input("Escriba a que numero de indice: "))
     if (a<=2):
         print ("Si el valor es menor que 2, el indice se toma al cuadrado por defecto")
         a=2
+#Entregamos resultado
     print ("Su resultado es: " +str(math.sqrt(b)))
 
     """VERIFICACION DE NUMEROS PRIMOS
@@ -258,11 +278,16 @@ elif (n==7): #Verificacion de numeros primos
         print ("(2) Una vez ingresado el numero el programa evaluara el numero")
         print ("(3) Como resultado, el programa le dira si su numero es primo o no")
         print ("")
+#a es un contador
     a=0
+#Solicitamos el numero a verificar
     n=int(input("Ingrese numero para verificar si es primo: "))
+#Iniciamos con las pruebas
     for i in range(1,n+1):
+#Si el residuo es 0 le sumamos 1 a la variable a
         if(n % i==0):
             a=a+1
+#Si a no logra sumar dos puntos no es primo
     if(a!=2):
         print ("El numero "+(str(n)+" no es primo"))
         print ("")
@@ -277,6 +302,7 @@ elif (n==7): #Verificacion de numeros primos
     Caso 2: Si el numero demuestra que no es multiplo de nunguno, sera imprimido en pantalla"""
 
 elif (n==8): #Numero Primo por Rango
+#a es un contador
     a=0
     print ("---NUMEROS PRIMOS POR RANGO---")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
@@ -288,6 +314,7 @@ elif (n==8): #Numero Primo por Rango
         print ("(3) Como resultado, se generara una lista de numeros primos hasta el numero limite")
         print ("")
 
+#Solicitamos el limitede la lista
     lim=(input("Ingrese el limite de la lista de numeros primos: "))
     while (not lim.isdigit()):
         print ("Solo se aceptan numeros.")
@@ -297,6 +324,8 @@ elif (n==8): #Numero Primo por Rango
     print ("")
     print ("La lista de numeros primos hasta el numero "+str(lim)+" es:")
     print ("")
+#Iniciamos con la inspeccion
+#El rango va del 2 a el limite establecido
     for x in range (2,lim):
         prnt=False
         verf=0
@@ -304,6 +333,7 @@ elif (n==8): #Numero Primo por Rango
             if(x % i==0):
                 verf=verf+1
         if (prnt==False and verf<3):
+#Entregamos resultados
             print (str(x))
             prnt=True
     print ("")
@@ -377,11 +407,15 @@ elif (n==11): #Decimal a Hexadecimal
         print ("(3) Como resultado, el programa le dira el numero que ingreso, pero usando los dieciseis numeros")
         print ("")
 
+#Solicitamos un numero
     a=(input("Ingrese una cifra en decimal: "))
     while (not a.isdigit()):
+#Si lo que ingresamos no es un numero le decimos al usuario y le pedimos otro
         print ("Solo se aceptan numeros.")
         a=(input("Ingrese una cifra en decimal: "))
+#Convertimos el numero en entero
     a=int(a)
+#Entregamos el resultado
     print ("Su resultado es: " + format(a, '02x'))
     print ("")
             
@@ -487,12 +521,16 @@ elif (n==15): #Metros a Yardas
         print ("(2) Presione 'Enter' para que el programa lo convierta a Yardas")
         print ("(1) Escriba la cantidad de metros que desea convertir")
         print ("")
+#Solicitamos la cantidad de metros a convertir
     metros=input("¿Cuantos metros quieres convertir a yardas? ")
     while (metros==""):
+#Si el usuario no realizo el proceso correctamente le pedimos que lo haga de nuevo
         print ("")
         print ("Porfavor escoja no deje ese espacio vacio ")
         metros=input("¿Cuantos metros quieres convertir a yardas? ")
+#Hacemos la conversion
     conversion= int(metros)*(int(1)/float(.914))
+#Entregamos el resultado
     print ("Sus metros en yardas son: "+ str(conversion)+"yd")
 
     """YARDAS A METROS
@@ -500,11 +538,15 @@ elif (n==15): #Metros a Yardas
   basada en regla de 3; multiplicando el numero de yardas por el el equivalente de 
   un metro pero en medias de yardas y dividiendoloe entre 1 para asi mostrar la conversion"""
 elif (n==16): #yardas a metros
+#Solicitamos la cantidad de yardas a convertir
     yardas=input("Ingrese el numero de Yardas que quiere transformar a metros: ")
     while (yardas==""):
+#Si el usuario realiza el proceso mal le pedimos que lo haga de nuevo
         print("Porfavor no deje ese espacio en blanco")
         yardas=input("Podria ingresar otra vez el numero?: ")
+#Hacemos la conversion
     Conversion= int(yardas)*float(.9144)/int(1)
+#Entregamos el resultado
     print ("Sus yardas transformadas a metros son: "+str(Conversion)+"m")
 
 
@@ -525,20 +567,28 @@ elif (n==19): #Calculadora de IMC
         print ("(3) Como resultado, el programa le dira su indice de masa corporal.")
         print ("")
 
+#Solicitamos el peso del usuario
     pes=(input("Ingrese su peso en Kg (Kilogramos): "))
     while (not pes.isdigit()):
+#Si este no lo realizo correctamente le pedimos que lo haga de nuevo
         print ("Solo se aceptan numeros.")
         print ("")
         pes=(input("Ingrese su peso en Kg (Kilogramos): "))
+#Convertimos la cantidad a enteros
     pes=int(pes)
 
+#Le pedimos al usuario que introduzca su altura en centimetros
     alt=(input("Ingrese su altura en Cm (Centimetros): "))
     while (not alt.isdigit()):
+#Si realiza el proceso incorrectamente le pedimos que lo haga de nuevo
         print ("Solo se aceptan numeros.")
         print ("")
         alt=(input("Ingrese un altura en Mt (Metros): "))
+#Convertimos la altura en un numero flotante
     alt=float(alt)
+#Realizamos la operacion para calcular el IMC
     imc=(pes/((alt/100)**2))
+#Entregamos el resultado
     print ("Su IMC es de: "+str(imc))
     print ("")
    
