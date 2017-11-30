@@ -338,8 +338,23 @@ elif (n==8): #Numero Primo por Rango
             prnt=True
     print ("")
 
+    ''' BINARIO A HEXADECIMAL   
+    Con esta funcion se logra conbertir un numero que esta en binario a uno en hexadecimal
+    Se utilizan datos de la libreria matematica como hex. 
+    En el int significa el numero en enteros que sera divido con el 2 de la funcion de binario.
+    is.digit() permite que no se acepten letras y solo acepte numeros. 
+    '''
+
 elif (n==9): #Binario a Hexadecimal 
-    print ("BINARIO -> HEXADECIMAL") 
+    print ("---BINARIO -> HEXADECIMAL---")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("")     
+    if (hlp=="h" or hlp=="H"):
+        print ("---Ayuda de Binario -> Hexadecimal---")
+        print ("(1) Ingresar una cifra en binario. [Recuerde que este sistema usa 1 y 0] y despues presione 'Enter'")
+        print ("(2) El programa convertirá la cifra a hexadecimal.")
+        print ("(3) Como resultado, se imprimira en pantalla la cifra convertida a sistema hexadecimal.")
+        print ("")
     print ("-"*50)
     numbinario = input("Ingrese un numero binario: ")
     print ("-"*50)
@@ -350,12 +365,6 @@ elif (n==9): #Binario a Hexadecimal
     bina = int(numbinario, 2)
     print ("Su numero",numbinario," en hexadecimal es:", hex(bina))
 
-    ''' BINARIO A HEXADECIMAL   
-    Con esta funcion se logra conbertir un numero que esta en binario a uno en hexadecimal
-    Se utilizan datos de la libreria matematica como hex. 
-    En el int significa el numero en enteros que sera divido con el 2 de la funcion de binario.
-    is.digit() permite que no se acepten letras y solo acepte numeros. 
-    '''
 elif (n==10): #Binario a Decimal -- Falta completar
     print ("BINARIO -> DECIMAL")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
@@ -367,7 +376,6 @@ elif (n==10): #Binario a Decimal -- Falta completar
         print ("(3) Presione '1' seguido de un 'Enter' para poder introducir otro numero o presione '0' seguido de un 'Enter' para terminar el programa")
         print ("")
     respuesta=1
-
     while(respuesta==1):
 #Primero le pedimos al usuario su numero en binario
         binario=input("Introduzca un numero en binario: ")
@@ -469,6 +477,14 @@ elif (n==12): #Decimal a Binario
 
 elif (n==13): #Hexadecimal a Binario (Falta a prueba de errores)
     print ("HEXADECIMAL -> BINARIO")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("")
+    if (hlp=="h" or hlp=="H"):
+        print ("---Ayuda de Hexadecimal a Binario---")
+        print ("(1) Escriba una cifra en sistema hexadecimal [Numeros y A,B,C,D,E,F son admitidos]. Luego presionar 'Enter'")
+        print ("(2) El programá realizará los calculos necesarios para convertir la cifra en binario")
+        print ("(3) Como resultado se imprimirá el resultado en 1 y 0; Digitos del sistema binario")
+        print ("")
     numero = input("Ingresa un valor hexadecimal :")
     print ("-"*50)
     a=len(numero)
@@ -512,14 +528,13 @@ elif (n==14): #Hexadecimal a Decimal
     multiplica esa cantidad por metro(1)/yarda(.914) y muestra el resultado """
 elif (n==15): #Metros a Yardas
     print ("METROS -> YARDAS")
-    print ("")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
-    print ("---Metros -> Yardas---")
+    print ("---Ayuda de Metros -> Yardas---")
     print ("")  
     if (hlp=="h" or hlp=="H"):
-        print ("(3) Como resultado, se mostrara la conversi[on de metros(m) a yardas(yd)")
-        print ("(2) Presione 'Enter' para que el programa lo convierta a Yardas")
         print ("(1) Escriba la cantidad de metros que desea convertir")
+        print ("(2) Presione 'Enter' para que el programa lo convierta a Yardas")
+        print ("(3) Como resultado, se mostrara la conversi[on de metros(m) a yardas(yd)")   
         print ("")
 #Solicitamos la cantidad de metros a convertir
     metros=input("¿Cuantos metros quieres convertir a yardas? ")
@@ -538,6 +553,15 @@ elif (n==15): #Metros a Yardas
   basada en regla de 3; multiplicando el numero de yardas por el el equivalente de 
   un metro pero en medias de yardas y dividiendoloe entre 1 para asi mostrar la conversion"""
 elif (n==16): #yardas a metros
+    print ("YARDAS -> METROS")
+    hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
+    print ("---Ayuda de Yardas -> Metros---")
+    print ("")  
+    if (hlp=="h" or hlp=="H"):
+        print ("(1) Escriba la cantidad de yardas que desea convertir")
+        print ("(2) Presione 'Enter' para que el programa lo convierta a Metros")
+        print ("(3) Como resultado, se mostrara la conversion de Yardas(yd) a Metros(m)")
+        print ("")
 #Solicitamos la cantidad de yardas a convertir
     yardas=input("Ingrese el numero de Yardas que quiere transformar a metros: ")
     while (yardas==""):
