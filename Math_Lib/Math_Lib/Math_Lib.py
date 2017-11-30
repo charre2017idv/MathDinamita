@@ -69,8 +69,45 @@ def DaH (a):
     return a
 def DaB (a):
     return a 
-def HaB (a):
-    return a 
+def HaB (a): # El codigo que se ejecuta esta en el Num 13
+    if (a == "0"): # Primer valor de numeros hex que se convertiran
+         cambio = "0000" # Primer valor de bin que se convertiran
+    elif ( a == "1"): # Segundo valor de numeros hex que se convertiran
+        cambio = "0001" # Segundo valor de bin que se convertiran
+    elif (a == "2"):
+        cambio = "0010"
+    elif (a == "3"):
+        cambio = "0011"
+    elif (a == "4"):
+        cambio = "0100"
+    elif (a == "5"):
+        cambio = "0101"
+    elif (a == "6"):
+        cambio = "0110"
+    elif (a == "7"):
+        cambio = "0111"
+    elif (a == "8"):
+        cambio = "1000"
+    elif (a == "9"):
+        cambio = "1001"
+    elif (a == "A" or a == "a"):
+        cambio = "1010"
+    elif (a == "B" or a == "b"):
+        cambio = "1011"
+    elif (a == "C" or a == "c"):
+        cambio = "1100"
+    elif (a == "D" or a == "d"):
+        cambio = "1101"
+    elif (a == "E" or a == "e"):
+        cambio = "1110"
+    elif (a == "F" or a == "f"):
+        cambio = "1111"
+    else:
+        cambio = "Ese valor no es valido."
+        numero = input("Ingresa un valor hexadecimal :")
+        print ("-"*50)
+    return cambio
+   
 def HaD (a):
     return a
 def BaD (a):
@@ -271,10 +308,24 @@ elif (n==8): #Numero Primo por Rango
             prnt=True
     print ("")
 
-elif (n==9): #Binario a Hexadecimal -- Falta completar
+elif (n==9): #Binario a Hexadecimal 
     print ("BINARIO -> HEXADECIMAL") 
-    print ("") 
+    print ("-"*50)
+    numbinario = input("Ingrese un numero binario: ")
+    print ("-"*50)
+    while(not numbinario.isdigit()):
+        print ("Solo se aceptan numeros en binario.")
+        numbinario = input("Ingrese un numero binario: ")
+        print ("-"*50)
+    bina = int(numbinario, 2)
+    print ("Su numero",numbinario," en hexadecimal es:", hex(bina))
 
+    ''' BINARIO A HEXADECIMAL   
+    Con esta funcion se logra conbertir un numero que esta en binario a uno en hexadecimal
+    Se utilizan datos de la libreria matematica como hex. 
+    En el int significa el numero en enteros que sera divido con el 2 de la funcion de binario.
+    is.digit() permite que no se acepten letras y solo acepte numeros. 
+    '''
 elif (n==10): #Binario a Decimal -- Falta completar
     print ("BINARIO -> DECIMAL")
     hlp=str(input("Para iniciar la funcion presione 'Enter', pero si no sabe como funciona o necesita ayuda, presione 'h': "))
@@ -312,7 +363,8 @@ elif (n==10): #Binario a Decimal -- Falta completar
     .isdigit() cumple la funcion de revisar si existen puros numeros y de este modo
     no acepte caracteres de letra.'''
     
-    """Aqui hacemos implementamos la funcion decimal a hexadecimal que lo que hace es transformar numeros decimales al codigo hexadecimal """
+    """Aqui hacemos implementamos la funcion decimal a hexadecimal que lo que hace es transformar 
+    numeros decimales al codigo hexadecimal """
 elif (n==11): #Decimal a Hexadecimal
     print ("DECIMAL -> HEXADECIMAL")
     print ("")
@@ -381,8 +433,17 @@ elif (n==12): #Decimal a Binario
 
     print ("")
 
-elif (n==13): #Hexadecimal a Binario
+elif (n==13): #Hexadecimal a Binario (Falta a prueba de errores)
     print ("HEXADECIMAL -> BINARIO")
+    numero = input("Ingresa un valor hexadecimal :")
+    print ("-"*50)
+    a=len(numero)
+    binnario=0
+    letras=""
+    while (binnario < a):
+        letras=letras+HaB(numero[binnario])
+        binnario+=1
+    print ("Tu valor en binario es: ", letras)
 
     """ En esta funcion se puede calcular un numero de hexadecimal a un numero decimal
     comenzando por iniciar un ciclo que niegue letras fuera del patron del hexadecima
