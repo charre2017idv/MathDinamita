@@ -32,7 +32,8 @@ print ("-(13) Hexadecimal -> Binario")
 print ("-(14) Hexadecimal -> Decimal")
 print ("-(15) Metros -> Yardas")
 print ("-(16) Yardas -> Metros")
-
+print ("-(17) Metros -> Pulgadas")
+print ("-(18) Pulgadas -> Metros")
 print ("")
 
 print ("FUNCIONES ADICIONALES: ")
@@ -557,7 +558,24 @@ elif (n==16): #yardas a metros
     El proposito de esta funcion es el de calcular el indice de masa corporal del usuario.
     Los datos del usuario (Peso y Altura) se utilizan como variables para obtener el dato.
     El peso se divide entre la altura en metros al cuadrado."""
-
+elif (n==17): #Metros a Pulgadas
+    print ("Bienvenido al convertidor Metros a Pulgada")
+    m=(input("Cuantos metros quiere convertir? "))
+    pulgada=39.3700787402
+    if (m== " "):
+        print("Porfavor no deje el espacio en blanco")
+        m=int(input("Cuantos metros quiere convertir? "))
+    elif (m<0):
+        print("no puedes tomar valores negativos")
+        m=int(input("Cuantos metros quiere convertir? "))
+    else:
+        operacion=pulgada*int(m)
+        print (operacion)
+elif(n==18):#Pulgadas a Metros
+    print ("Bienvenido al convertidor Metros a Pulgada")
+    p=int(input("Cuantas pulgadas quiere convertir? "))
+    me=0.0254
+    operacion=me*int(p)
 elif (n==19): #Calculadora de IMC (Falata comentar)
     print ("CALCULADORA DE INDICE DE MASA CORPORAL")
     print ("")
