@@ -133,7 +133,11 @@ if (n==1) : #Suma
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
 #A continuación se le pedide al usuario ingresar la cantidad de numeros a sumar
-    a=int(input("Escriba cantidad de numeros a sumar: "))
+    a=(input("Escriba cantidad de numeros a sumar: "))
+#evitar cierre del programa
+    while (a==""):
+        print("Porfavor no deje en espacio vacio ")
+        a=(input("Numero: "))
     i=0
     r=0
     while(i<a):
@@ -145,6 +149,7 @@ if (n==1) : #Suma
 #Y entregamos el resultado
     print ("El resultado de la suma es: " +str(suma(r)))
     print ("")
+    
 
     """MULTIPLICACION
     En esta funcion se pueden multiplicar dos variables dadas por el usuario y asi obtener un nuevo valor numerico """
@@ -161,12 +166,16 @@ elif (n==2): #Multiplicacion
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
 #Se ingresan la cantidad de numeros a multiplicar
-    a=int(input("Escriba cantidad de numeros a multiplicar: "))
+    a=(input("Escriba cantidad de numeros a multiplicar: "))
     i=0
     r=1
+    while(a==""):
+        print("Porfavor no deje el espacio vacio")
+        a=(input("Escriba cantidad de numeros a multiplicar: "))
     while(i<a):
 #Se ingresan los numeros que seran multiplicados
         b=int(input("Numero: "))
+        
 #Obtenemos el resultado
         r=r*b
         i=i+1
