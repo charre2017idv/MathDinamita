@@ -199,9 +199,21 @@ elif (n==3): #Division
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
 #Pedimos el numero que sera dividido
-    a=float(input("Escriba el dividendo: "))
+    a=(input("Escriba el dividendo: "))
+    while (not a.isdigit()):
+#Si realiza el proceso incorrectamente le pedimos que lo haga de nuevo
+        print ("Solo se aceptan numeros.")
+        print ("")
+        a=(input("Escriba el dividendo: "))
+    a=float(a)
 #Pedimos el numero que va a dividir
-    b=float(input("Escriba el divisor: "))
+    b=(input("Escriba el divisor: "))
+    while (not b.isdigit()):
+#Si realiza el proceso incorrectamente le pedimos que lo haga de nuevo
+        print ("Solo se aceptan numeros.")
+        print ("")
+        b=(input("Escriba el divisor: "))
+    b=float(b)
 #Y entregamos el resultado
     print ("Su resultado es: " +str(division(a,b)))
 
@@ -220,8 +232,20 @@ elif (n==4): #Modulo
         print ("(3) Una vez ingresados todos los datos su respuesta se imprimira presionando 'Enter'")
         print ("")
 #Solicitamos divisor y dividendo
-    a=int(input("Escriba el dividendo : "))
-    b=int(input("Escriba el divisor: "))
+    a=(input("Escriba el dividendo : "))
+    while (not a.isdigit()):
+#Si realiza el proceso incorrectamente le pedimos que lo haga de nuevo
+        print ("Solo se aceptan numeros.")
+        print ("")
+        a=(input("Escriba el dividendo: "))
+    a=int(a)
+    b=(input("Escriba el divisor: "))
+    while (not b.isdigit()):
+#Si realiza el proceso incorrectamente le pedimos que lo haga de nuevo
+        print ("Solo se aceptan numeros.")
+        print ("")
+        b=(input("Escriba el divisor: "))
+    b=int(b)
 #Entregamos el residuo
     print ("Su resultado es: " +str(modulo(a,b)))
 
